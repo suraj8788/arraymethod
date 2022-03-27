@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table style="width: 95%;">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th colspan="6">Address</th>
+            <th>Phone</th>
+            <th>website</th>
+            <th colspan="3">Company</th>
+        </tr>
+        <tbody id="tbody">
+    
+        </tbody>
+    </table>
+    <script>
+        (function() {
+            const data = JSON.parse(localStorage.getItem('loggedIdData'));
+            var str = "";
+            str += "<tr>";
+            str +=   "<td>"+ data.id +"</td>";
+            str +=   "<td>"+ data.name +"</td>";
+            str +=   "<td>"+ data.username +"</td>";
+            str +=   "<td>"+ data.email +"</td>";
+            str +=   "<td>"+ data.address.street +"</td>";
+            str +=   "<td>"+ data.address.suite +"</td>";
+            str +=   "<td>"+ data.address.city +"</td>";
+            str +=   "<td>"+ data.address.zipcode +"</td>";
+            str +=   "<td>"+ data.address.geo.lat +"</td>";
+            str +=   "<td>"+ data.address.geo.lng +"</td>";
+            str +=   "<td>"+ data.phone +"</td>";
+            str +=   "<td>"+ data.website+"</td>";
+            str +=   "<td>"+ data.company.name +"</td>";
+            str +=   "<td>"+ data.company.catchPhrase +"</td>";
+            str +=   "<td>"+ data.company.bs +"</td>";
+            str += "</tr>";
+            document.getElementById('tbody').innerHTML = str;
+        })();         
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h2>JavaScript Date Methods</h2>
+<p>today date:</p>
+<p id="demo"></p>
+<p>Birthdate:</p>
+<p id="Date"></p>
+<p>Birth time:</p>
+<p id="time"></p>
+<p>milisecound:</p>
+<p id="milisecound"></p>
+<script>
+// const d = new Date("1999-03-15");
+// document.getElementById("demo").innerHTML = d.getTime();
+let a=new Date();
+document.getElementById("demo").innerHTML=a;
+a.setDate(15);
+a.setFullYear(1999);
+a.setMonth(02);
+document.getElementById("Date").innerHTML=a;
+a.getMilliseconds();
+document.getElementById("milisecound").innerHTML=a;
+// document.getElementById("Date").innerHTML=b;
+// document.getElementById("time").innerHTML=b.getTime();
+</script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            height: 500px;
+            width: 500px;
+            background-color: antiquewhite;
+        }
+        .BOX2{
+            padding-left: 34%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1">
+    <div class="BOX2">
+    <label for="">Id:</label>
+    <input type="number" name="" id="Number">
+    </div>
+    <br>
+    <div class="BOX2">
+    <input type="submit" value="get index" onclick="submit()">
+    </div>
+    <div class="BOX2">
+    <input type="submit" value="get obj" onclick="submit1()">
+    </div>
+    <div class="BOX2">
+    <input type="submit" value="filter" onclick="submit2()">
+    </div>
+    <div class="BOX2">
+    <input type="submit" value="reverse" onclick="submit3()">
+    </div class="BOX2">
+    <p id="position"></p>
+    </div>
+    <script>
+        let data={}
+        function submit() {
+            let number = document.getElementById("Number").value;
+            fetch("https://jsonplaceholder.typicode.com/users")
+                .then(response => response.json())
+                .then((data) => {
+                    let index = data.findIndex(element => {
+                        if (element.id == number) {
+                            return true;
+                        }
+                    });
+                    console.log(index);
+                });
+        }
+        function submit1() {
+            let number = document.getElementById("Number").value;
+            fetch("https://jsonplaceholder.typicode.com/users")
+                .then(response => response.json())
+                .then((data) => {
+                    let index = data.find(element => {
+                        if (element.id == number) {
+                            return true;
+                        }
+                    });
+                    console.log(index);
+                });
+            // document.getElementById("position").innerHTML=data.findIndex(number);
+        }
+        function submit2() {
+            let number = document.getElementById("Number").value;
+            fetch("https://jsonplaceholder.typicode.com/users")
+                .then(response => response.json())
+                .then((data) => {
+                    let index = data.filter(element => {
+                        if (element.id == number) {
+                            return true;
+                        }
+                    });
+                    console.log(index);
+                });
+        }
+        function submit3() {
+            let number = document.getElementById("Number").value;
+            fetch("https://jsonplaceholder.typicode.com/users")
+                .then(response => response.json())
+                .then((data) => {
+                    let index = data.reverse(element => {
+                        if (element.id == number) {
+                            return true;
+                        }
+                    });
+                     console.log(index);
+                });
+        }
+    </script>
+</body>
+
+</html>

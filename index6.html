@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page API</title>
+</head>
+<body>
+    <label for="">id:</label>
+    <input type="number" name="" id="Number">
+    <br><br>
+    <input type="submit" value="submit" onclick="validation()">
+    <script>
+        function validation( ) {
+            let number=document.getElementById('Number').value;
+            // let Exist=true;
+            let Exist=false;
+            fetch("https://jsonplaceholder.typicode.com/users")
+            .then(response => response.json())
+            .then((data)=>{ 
+                console.log(data);
+                for (var i = 0; i < data.length; i++){
+                    if(element.id == number) {
+                        // localStorage.setItem('loggedInEmailData', JSON.stringify(data[i]));
+                        // window.location.href="index3.html";
+                        Exist=true;
+                    } else{
+                        Exist=false;
+                    }
+                };
+                if (Exist) {
+                    localStorage.setItem('loggedInEmailData', JSON.stringify(data[i]));
+                    // alert("Email is valid");
+                    window.location.href="index1.html";
+                } else {
+                    // alert("Email is invalid");
+                }
+            });    
+        }
+    </script>
+</body>
+</html>

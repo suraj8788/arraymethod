@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Strings Methods</h1>
+<p>Ex, hello world</p>
+
+<p id="sub"></p>
+<p id="sub1"></p>
+<p id="sub2"></p>
+<p id="sub3"></p>
+<p id="sub4"></p>
+<p id="sub5"></p>
+<script>
+let str = "Hello world!";
+let result = str.substr(2);//start from 2 index
+let result1=str.substr(1,2);//start and lenght of number
+let result2=str.substring(1, 4);//start and end of number
+let result3=str.slice(0, 5);//start and end of nuber
+let result4=str.length
+document.getElementById("sub").innerHTML = result;
+document.getElementById("sub1").innerHTML=result1;
+document.getElementById("sub2").innerHTML=result2;
+document.getElementById("sub3").innerHTML=result3;
+document.getElementById("sub4").innerHTML=result4;
+</script>
+</body>
+</html>

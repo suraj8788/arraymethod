@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>age</p>
+    <p id="date"></p>
+    <p id="birthdate"></p>
+    <p id="age"></p>
+    <script>
+        let a=new Date();
+        let b= a.getFullYear();
+        document.getElementById("date").innerHTML=b;
+        let c=new Date("1999-03-15")
+        let d=c.getFullYear();
+        document.getElementById("birthdate").innerHTML=d;
+        function Age(a,b) {
+            return a-b;
+        }
+        document.getElementById("age").innerHTML=Age(b,d);
+    </script>
+</body>
+</html>

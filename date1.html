@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="milisecound"></p>
+    <p>Birthdate</p>
+    <p id="date"></p>
+    <p>time:</p>
+    <p id="time"></p>
+    <p>set date:</p>
+    <p id="setdate"></p>
+    <script>
+        let a=new Date();
+        document.getElementById("demo").innerHTML=a;
+        document.getElementById("milisecound").innerHTML=a.getMilliseconds()
+        let b=new Date("1999-03-15");
+        document.getElementById("date").innerHTML=b;
+        document.getElementById("time").innerHTML=b.getTime();
+        b.setDate(3);
+        document.getElementById("setdate").innerHTML=b;
+    </script>
+</body>
+</html>
